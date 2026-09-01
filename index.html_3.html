@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Yon 💙</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: linear-gradient(135deg, #e5f7ff, #b8e4f7, #75bddd);
+    color: #174b68;
+    overflow: hidden;
+}
+
+
+/* SPARKLES */
+
+.sparkle {
+    position: fixed;
+    color: rgba(255,255,255,.85);
+    pointer-events: none;
+    z-index: 10;
+    animation: sparkleMove 4s ease-in-out infinite;
+}
+
+.sparkle:nth-child(1) {
+    top: 12%;
+    left: 12%;
+    font-size: 18px;
+}
+
+.sparkle:nth-child(2) {
+    top: 20%;
+    right: 14%;
+    font-size: 13px;
+    animation-delay: 1s;
+}
+
+.sparkle:nth-child(3) {
+    bottom: 18%;
+    left: 17%;
+    font-size: 15px;
+    animation-delay: 2s;
+}
+
+.sparkle:nth-child(4) {
+    bottom: 12%;
+    right: 12%;
+    font-size: 20px;
+    animation-delay: 1.5s;
+}
+
+.sparkle:nth-child(5) {
+    top: 48%;
+    right: 7%;
+    font-size: 12px;
+    animation-delay: .5s;
+}
+
+@keyframes sparkleMove {
+
+    0%,100% {
+        opacity: .35;
+        transform: scale(.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25) rotate(20deg);
+    }
+
+}
+
+
+/* PAGES */
+
+.page {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    padding: 35px 22px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-y: auto;
+}
+
+.page.active {
+    display: flex;
+    animation: pageIn .7s ease;
+}
+
+@keyframes pageIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.content {
+    width: min(800px, 100%);
+    text-align: center;
+}
+
+
+/* TEXT */
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 12vw, 105px);
+    line-height: .95;
+    margin: 15px 0;
+    color: #125477;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(34px, 7vw, 55px);
+    color: #145879;
+    margin: 10px 0 25px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.home-small {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #326f8f;
+}
+
+.home-subtitle {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #2d6886;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+button {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    border: none;
+    padding: 14px 27px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.primary {
+    background: #145b7d;
+    color: white;
+    box-shadow: 0 10px 25px rgba(20,91,125,.25);
+}
+
+.primary:hover {
+    transform: translateY(-4px);
+    background: #0e4d6c;
+}
+
+.secondary {
+    background: rgba(255,255,255,.65);
+    color: #326d8b;
+}
+
+.secondary:hover {
+    transform: translateY(-3px);
+}
+
+
+/* CARD */
+
+.card {
+    background: rgba(255,255,255,.64);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 32px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(21,88,120,.18);
+}
+
+
+/* CAKE */
+
+.cake-area {
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cake {
+    width: 230px;
+    height: 250px;
+    position: relative;
+}
+
+.plate {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 210px;
+    height: 24px;
+    background: #dff5ff;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(25,91,120,.2);
+}
+
+.cake-bottom {
+    position: absolute;
+    bottom: 42px;
+    left: 35px;
+    width: 160px;
+    height: 75px;
+    background: linear-gradient(#b9e5f8, #83c8e8);
+    border: 3px solid #5ba9d0;
+    border-radius: 14px;
+}
+
+.cake-top {
+    position: absolute;
+    bottom: 100px;
+    left: 45px;
+    width: 140px;
+    height: 55px;
+    background: #dff6ff;
+    border: 3px solid #71b9da;
+    border-radius: 14px 14px 10px 10px;
+}
+
+.icing {
+    position: absolute;
+    bottom: 132px;
+    left: 49px;
+    width: 132px;
+    height: 35px;
+    background: white;
+    border-radius: 15px 15px 25px 25px;
+    z-index: 2;
+}
+
+.candle {
+    position: absolute;
+    bottom: 160px;
+    left: 108px;
+    width: 15px;
+    height: 48px;
+    background: repeating-linear-gradient(
+        45deg,
+        #72b9da,
+        #72b9da 6px,
+        #d9f3ff 6px,
+        #d9f3ff 12px
+    );
+    border-radius: 5px;
+    z-index: 3;
+}
+
+
+/* REALISTIC FLAME */
+
+.flame {
+    position: absolute;
+    bottom: 203px;
+    left: 102px;
+    width: 28px;
+    height: 40px;
+    z-index: 5;
+}
+
+.flame::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 32px;
+    background: #fff8c7;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    left: 3px;
+    top: 5px;
+
+    box-shadow:
+        0 0 10px #fff,
+        0 0 22px #ffe88a,
+        0 0 40px rgba(255,220,80,.7);
+
+    animation: realFlame .8s infinite alternate;
+}
+
+@keyframes realFlame {
+
+    0% {
+        transform: rotate(42deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(50deg) scale(1.08);
+    }
+
+    100% {
+        transform: rotate(38deg) scale(.94);
+    }
+
+}
+
+
+/* LETTER */
+
+.letter {
+    background: rgba(245,252,255,.8);
+    border-radius: 22px;
+    padding: 28px;
+    text-align: left;
+    border-left: 5px solid #5ba9d0;
+}
+
+.letter p {
+    margin: 0 0 16px;
+}
+
+
+/* THINGS */
+
+.things {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    text-align: left;
+}
+
+.thing {
+    background: rgba(239,250,255,.85);
+    border-radius: 18px;
+    padding: 18px;
+    color: #285f7b;
+    transition: .2s;
+}
+
+.thing:hover {
+    transform: translateY(-4px);
+}
+
+
+/* STORY */
+
+.story {
+    background: rgba(245,252,255,.8);
+    padding: 30px;
+    border-radius: 25px;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* PHOTOS */
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.photo {
+    aspect-ratio: 1.15;
+    border-radius: 22px;
+    background: rgba(235,249,255,.8);
+    border: 2px dashed #62a9ca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5689a2;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* OUR SONG */
+
+.music-card {
+    max-width: 480px;
+    margin: auto;
+    background: rgba(255,255,255,.72);
+    border-radius: 30px;
+    padding: 35px;
+}
+
+.disc {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #e1f7ff 0 12px,
+            #245f7e 13px 18px,
+            #4d91b0 19px 22px,
+            #1f6285 23px 100%
+        );
+
+    box-shadow: 0 12px 30px rgba(18,80,108,.25);
+
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.song-title {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #145879;
+}
+
+.song-subtitle {
+    color: #5b8da5;
+}
+
+
+/* FINAL */
+
+.final h2 {
+    font-size: clamp(48px, 10vw, 80px);
+}
+
+
+/* BIG MOVING CAKE */
+
+.big-cake {
+    font-size: 110px;
+    margin: 20px auto;
+    display: inline-block;
+
+    animation: cakeBounce 1.7s ease-in-out infinite;
+
+    filter: drop-shadow(
+        0 15px 15px rgba(20,80,110,.18)
+    );
+}
+
+@keyframes cakeBounce {
+
+    0%,100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    25% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(-1deg);
+    }
+
+    75% {
+        transform: translateY(-7px) rotate(2deg);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .card {
+        padding: 24px 18px;
+    }
+
+    .things {
+        grid-template-columns: 1fr;
+    }
+
+    .photos {
+        gap: 10px;
+    }
+
+    .letter {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .big-cake {
+        font-size: 90px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- FIVE SPARKLES -->
+
+<div class="sparkle">✦</div>
+<div class="sparkle">✧</div>
+<div class="sparkle">✦</div>
+<div class="sparkle">✧</div>
+<div class="sparkle">✦</div>
+
+
+<!-- PAGE 1 -->
+
+<section class="page active" id="page1">
+
+<div class="content">
+
+<div class="home-small">
+a little surprise for you
+</div>
+
+<h1>
+Happy<br>Birthday
+</h1>
+
+<h2 style="font-size:42px;margin-top:0;">
+Yon
+</h2>
+
+<p class="home-subtitle">
+from music
+</p>
+
+<div class="buttons">
+
+<button class="primary" onclick="goTo(2)">
+OPEN IT 💙
+</button>
+
+<button class="secondary">
+don't open
+</button>
+
+</div>
+
+<p style="font-size:12px;color:#5d8ca4;margin-top:15px;">
+(you know you're gonna open it anyway 😭)
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 2 -->
+
+<section class="page" id="page2">
+
+<div class="content card">
+
+<h2>
+Make a wish
+</h2>
+
+<div class="cake-area">
+
+<div class="cake">
+
+<div class="flame"></div>
+
+<div class="candle"></div>
+
+<div class="icing"></div>
+
+<div class="cake-top"></div>
+
+<div class="cake-bottom"></div>
+
+<div class="plate"></div>
+
+</div>
+
+</div>
+
+<div style="
+font-family:'Playfair Display',serif;
+font-size:23px;
+font-style:italic;
+margin-bottom:20px;
+">
+make a wish
+</div>
+
+<button class="primary" onclick="goTo(3)">
+letter
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 3 -->
+
+<section class="page" id="page3">
+
+<div class="content card">
+
+<h2>
+HBD TWIN!!
+</h2>
+
+<div class="letter">
+
+<p>
+wish you a year filled with happiness and achievements that make you proud.
+</p>
+
+<p>
+I hope everything you wish for comes true and I hope this new year brings you lots of happy moments.
+</p>
+
+<p>
+Im grateful to have such a kind person like you as a friend in my life.
+</p>
+
+<p>
+Enjoy your special month because you deserve all the good things in the world.
+</p>
+
+<p>
+<strong>
+Happy Birthday again Yon! 💙
+</strong>
+</p>
+
+</div>
+
+<br>
+
+<button class="primary" onclick="goTo(4)">
+things I like about u
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 4 -->
+
+<section class="page" id="page4">
+
+<div class="content card">
+
+<h2>
+things I like about u
+</h2>
+
+<div class="things">
+
+<div class="thing">
+YOU
+</div>
+
+<div class="thing">
+Your laugh
+</div>
+
+<div class="thing">
+Your dimples
+</div>
+
+<div class="thing">
+The way things are fun with u
+</div>
+
+<div class="thing">
+How easy it is to talk to u
+</div>
+
+<div class="thing">
+How happy and comfortable I am when I'm with u
+</div>
+
+<div class="thing">
+Yara & Sahab
+</div>
+
+</div>
+
+<br>
+
+<button class="primary" onclick="goTo(5)">
+our story 
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 5 -->
+
+<section class="page" id="page5">
+
+<div class="content card">
+
+<h2>
+our story 
+</h2>
+
+<div class="story">
+
+I don’t know, we started calling each other’s twin on Among Us randomly 😭😭
+
+<br><br>
+
+Even though I didn’t plan it, I actually wanted to be your friend from a while ago at that time.
+
+<br><br>
+
+Thanks to Roblox and Among Us!! 💙
+
+</div>
+
+<br>
+
+<button class="primary" onclick="goTo(6)">
+our photos
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 6 -->
+
+<section class="page" id="page6">
+
+<div class="content card">
+
+<h2>ذكريات الكورنيش</h2>
+
+<div class="photos">
+
+<div class="photo">
+<img src="IMG_3046.jpg" alt="صورة 1">
+</div>
+
+<div class="photo">
+<img src="IMG_3338.jpg" alt="صورة 2">
+</div>
+
+<div class="photo">
+<img src="IMG_3352.jpg" alt="صورة 3">
+</div>
+
+<div class="photo">
+<img src="IMG_3663.jpg" alt="صورة 4">
+</div>
+
+</div>
+
+<br>
+
+<button class="primary" onclick="goTo(7)">
+our song
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 7 -->
+
+<section class="page" id="page7">
+
+<div class="content card">
+
+<h2>
+Our Song ♡
+</h2>
+
+<div class="music-card">
+
+<div class="disc"></div>
+
+<div class="song-title">
+جدة غير
+</div>
+
+<div class="song-subtitle">
+محمود السفياني
+</div>
+
+<p>
+our song 💙
+</p>
+
+<a
+href="https://www.youtube.com/results?search_query=محمود+السفياني+جدة+غير"
+target="_blank"
+style="text-decoration:none;"
+>
+
+<button class="primary">
+▶ play our song
+</button>
+
+</a>
+
+</div>
+
+<br>
+
+<button class="primary" onclick="goTo(8)">
+one last thing
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 8 -->
+
+<section class="page" id="page8">
+
+<div class="content final">
+
+<h2>
+Happy Birthday Again!!
+</h2>
+
+<p style="font-size:20px;">
+I really hope you liked the surprise 💙
+</p>
+
+<div class="big-cake">
+🎂
+</div>
+
+<p>
+I hope you have the happiest birthday
+and an even happier year.
+</p>
+
+<p style="
+font-family:'Playfair Display',serif;
+font-size:24px;
+color:#145879;
+">
+Happy Birthday, Yon ♡
+</p>
+
+</div>
+
+</section>
+
+
+<script>
+
+function goTo(number) {
+
+    document.querySelectorAll(".page")
+    .forEach(page => {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number)
+    .classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
